@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+// import './fonts/index.css';
 import SignIn from './Forms/SignIn';
 import SignUp from './Forms/SignUp';
 import { LinkContainer } from 'react-router-bootstrap';
@@ -24,7 +25,7 @@ class App extends Component {
 
 
   render(){
-    const navStyle = { marginTop: "4rem" };
+    const navStyle = { marginTop: "0rem" };
     const overlay = (
       <div
         id="sidenav-overlay"
@@ -55,7 +56,7 @@ class App extends Component {
                     </MDBNavItem>
                     <MDBNavItem>
                       <LinkContainer to={'/signIn'} className="mx-3">
-                        <MDBNavLink to="/signIn">Sign In</MDBNavLink>
+                        <MDBNavLink>Sign In</MDBNavLink>
                       </LinkContainer>
                     </MDBNavItem>
                     <MDBNavItem>
@@ -72,7 +73,9 @@ class App extends Component {
                             placeholder="Search"
                             aria-label="Search"
                           />
-			                    <MDBIcon fab icon="search"/>
+                          {/* <i class="fas fa-search"></i> */}
+                          <MDBIcon icon="search" />
+			                    {/* <MDBIcon fab icon="search"/> */}
                         </div>
                       </MDBFormInline>
                     </MDBNavItem>
