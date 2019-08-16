@@ -5,7 +5,7 @@ import '../Forms/Forms.css';
 
 const SignUp = () => {
    return (   
-       <div align="center"> 
+       <div align="center" className="form-control"> 
          
         <h2>Sign Up</h2>
         <br/>
