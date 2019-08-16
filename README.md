@@ -1,2 +1,2 @@
-# eazi4u-monolith
+# SpringBoot, NodeJS, ReactJS
 SpringBoot, NodeJS, ReactJS
