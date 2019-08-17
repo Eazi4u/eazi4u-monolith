@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 // import './fonts/index.css';
 import SignIn from './Forms/SignIn';
+import Testimony from './FrontPageComps/Testimonials';
 import SignUp from './Forms/SignUp';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button, Media, Badge } from 'react-bootstrap';
@@ -114,12 +115,13 @@ class App extends Component {
                         <MDBIcon icon="user" /> Register:
                       </h3>
                       <hr className="hr-light" />
-                      <MDBInput label="Your name" icon="user" />
-                      <MDBInput label="Your email" icon="envelope" />
+                      <MDBInput label="Your name" icon="user" className="white-text" />
+                      <MDBInput label="Your email" icon="envelope" className="white-text"/>
                       <MDBInput
                         label="Your password"
                         icon="lock"
                         type="password"
+                        className="white-text"
                       />
                       <div className="text-center mt-4 black-text">
                         <MDBBtn color="indigo">Sign Up</MDBBtn>
@@ -143,10 +145,6 @@ class App extends Component {
             </MDBContainer>
           </MDBMask>
         </MDBView>
-        <Switch>
-          <Route path="/signIn" render={props => <SignIn name="Sign In Page" {...props} />} />
-        </Switch>
-
         <MDBContainer>
           <MDBRow className="py-5">
             <MDBCol md="12" className="text-center">
@@ -160,6 +158,10 @@ class App extends Component {
             </MDBCol>
           </MDBRow>
         </MDBContainer>
+        <Testimony/>
+        <Switch>
+          <Route path="/signIn" render={props => <SignIn name="Sign In Page" {...props} />} />
+        </Switch>
         </Router>
       </div>
     );
