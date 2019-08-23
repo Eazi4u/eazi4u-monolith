@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import SignIn from '../Forms/SignIn';
 import Testimony from './Testimonials';
+import Interviews from '../InterviewScheduler/Interviews';
 import SignUp from '../Forms/SignUp';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button, Media, Badge } from 'react-bootstrap';
@@ -15,6 +16,20 @@ import '../App.css';
 
 class Main extends Component {
 
+    constructor(props){
+        super(props);
+        this.state = {
+            showInterview: true
+        }
+        this.handleToggleClick = this.handleToggleClick.bind(this);
+    }
+
+    handleToggleClick() {
+        this.setState(prevState => ({
+          showInterview: !prevState.showInterview
+        }));
+    }
+
     state = {
         collapseID: ""
     };
@@ -22,7 +37,7 @@ class Main extends Component {
     toggleCollapse = collapseID => () =>
         this.setState(prevState => ({
             collapseID: prevState.collapseID !== collapseID ? collapseID : ""
-        }));
+    }));
 
 
     render() {
@@ -62,7 +77,10 @@ class Main extends Component {
                                             </LinkContainer>
                                         </MDBNavItem>
                                         <MDBNavItem>
-                                            <MDBNavLink to="/signUp">Sign Up</MDBNavLink>
+                                            <MDBNavLink to="/signUp" >Sign Up</MDBNavLink>
+                                        </MDBNavItem>
+                                        <MDBNavItem>
+                                            <MDBNavLink to="/interviews" className="mx-3"> Interviews </MDBNavLink>
                                         </MDBNavItem>
                                     </MDBNavbarNav>
                                     <MDBNavbarNav right>
@@ -160,9 +178,9 @@ class Main extends Component {
                         </MDBRow>
                     </MDBContainer>
                     <Testimony />
-                    {/* <Switch>
-                        <Route path="/signIn" render={props => <SignIn name="Sign In Page" {...props} />} />
-                    </Switch> */}
+                    <Switch>
+                        <Route path="/interviews" render={props => <Interviews  className = {this.state.showInterview} />} />
+                    </Switch>
                 </Router>
             </div>
         );

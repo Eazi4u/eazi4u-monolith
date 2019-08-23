@@ -7,18 +7,21 @@ import Main from './FrontPageComps/Main';
 class App extends Component {
 
   state = {
-    signIn: false
+    showMain: false
   }
 
   render(){
     
     return (
       <div>
+        {/* <Main>
+          <Router>
+            <Switch>
+
+            </Switch>
+          </Router>
+        </Main> */}
         <Main />
-        {/* <Router>
-          <Switch>
-          </Switch>
-        </Router> */}
       </div>
     );
   }

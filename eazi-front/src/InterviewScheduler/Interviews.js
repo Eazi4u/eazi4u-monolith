@@ -162,7 +162,7 @@ class InterviewScheduler extends Component {
                 icon="clock"
                 name="time"
                 label="Time"
-                hint="12:30"
+                hint="Set event time e.g 12:30"
                 group
                 type="text"
                 getValue={this.handleInputChange("time")}
@@ -171,7 +171,7 @@ class InterviewScheduler extends Component {
                 icon="edit"
                 name="title"
                 label="Title"
-                hint="Briefing"
+                hint="Event title"
                 group
                 type="text"
                 getValue={this.handleInputChange("title")}
@@ -180,6 +180,7 @@ class InterviewScheduler extends Component {
                 icon="map"
                 name="location"
                 label="Location (optional)"
+                hint= "Location"
                 group
                 type="text"
                 getValue={this.handleInputChange("location")}
@@ -188,6 +189,7 @@ class InterviewScheduler extends Component {
                 icon="sticky-note"
                 name="description"
                 label="Description (optional)"
+                hint= "Description"
                 group
                 type="textarea"
                 getValue={this.handleInputChange("description")}
