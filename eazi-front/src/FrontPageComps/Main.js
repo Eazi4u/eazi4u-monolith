@@ -16,97 +16,21 @@ import '../App.css';
 
 class Main extends Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
-            showInterview: true
+            showInterview: false
         }
-        this.handleToggleClick = this.handleToggleClick.bind(this);
-    }
-
-    handleToggleClick() {
-        this.setState(prevState => ({
-          showInterview: !prevState.showInterview
-        }));
     }
 
     state = {
         collapseID: ""
     };
 
-    toggleCollapse = collapseID => () =>
-        this.setState(prevState => ({
-            collapseID: prevState.collapseID !== collapseID ? collapseID : ""
-    }));
-
-
     render() {
-        const navStyle = { marginTop: "0rem" };
-        const overlay = (
-            <div
-                id="sidenav-overlay"
-                style={{ backgroundColor: "transparent" }}
-                onClick={this.toggleCollapse("navbarCollapse")}
-            />
-        );
-
         return (
             <div id="classicformpage">
                 <Router>
-                    <div>
-                        <MDBNavbar style={navStyle} dark expand="md" fixed="top">
-                            <MDBContainer>
-                                <MDBNavbarBrand>
-                                    <strong className="white-text">Eazi4u</strong>
-                                </MDBNavbarBrand>
-                                <MDBNavbarToggler
-                                    onClick={this.toggleCollapse("navbarCollapse")}
-                                />
-                                <MDBCollapse
-                                    id="navbarCollapse"
-                                    isOpen={this.state.collapseID}
-                                    navbar
-                                >
-                                    <MDBNavbarNav left>
-                                        <MDBNavItem active>
-                                            <MDBNavLink to="/">Home</MDBNavLink>
-                                        </MDBNavItem>
-                                        <MDBNavItem>
-                                            <LinkContainer to={'/signIn'} className="mx-3">
-                                                <MDBNavLink>Sign In</MDBNavLink>
-                                            </LinkContainer>
-                                        </MDBNavItem>
-                                        <MDBNavItem>
-                                            <MDBNavLink to="/signUp" >Sign Up</MDBNavLink>
-                                        </MDBNavItem>
-                                        <MDBNavItem>
-                                            <MDBNavLink to="/interviews" className="mx-3"> Interviews </MDBNavLink>
-                                        </MDBNavItem>
-                                    </MDBNavbarNav>
-                                    <MDBNavbarNav right>
-                                        <MDBNavItem>
-                                            <MDBFormInline waves>
-                                                <div className="md-form my-0">
-                                                    <input
-                                                        className="form-control mr-sm-2"
-                                                        type="text"
-                                                        placeholder="Search"
-                                                        aria-label="Search"
-                                                    />
-                                                    {/* <i class="fas fa-search"></i> */}
-                                                    <MDBIcon icon="search" />
-                                                    {/* <MDBIcon fab icon="search"/> */}
-                                                </div>
-                                            </MDBFormInline>
-                                        </MDBNavItem>
-                                    </MDBNavbarNav>
-                                </MDBCollapse>
-                            </MDBContainer>
-                        </MDBNavbar>
-                        {this.state.collapseID && overlay}
-                    </div>
-
-
                     <MDBView>
                         <MDBMask className="d-flex justify-content-center align-items-center gradient">
                             <MDBContainer>
@@ -122,17 +46,17 @@ class Main extends Component {
                                             interviews, a candidate that gets a job through our platform will receive R2000
                                             cash within a week after employment. Candidates must sign up and complete their
                                             profiles to receive requests from companies!
-                  </h6>
+                                        </h6>
                                         <MDBBtn outline color="white">
                                             Learn More
-                  </MDBBtn>
+                                        </MDBBtn>
                                     </div>
                                     <MDBCol md="6" xl="5" className="mb-4">
                                         <MDBCard id="classic-card">
                                             <MDBCardBody className="z-depth-2 white-text" align="left">
                                                 <h3 className="text-center">
                                                     <MDBIcon icon="user" /> Register:
-                      </h3>
+                                                </h3>
                                                 <hr className="hr-light" />
                                                 <MDBInput label="Your name" icon="user" className="white-text" />
                                                 <MDBInput label="Your email" icon="envelope" className="white-text" />
@@ -146,7 +70,7 @@ class Main extends Component {
                                                     <MDBBtn color="indigo">Sign Up</MDBBtn>
                                                     <hr className="hr-light" />
                                                     <div className="text-center d-flex justify-content-center white-label">
-                                                        <a href="#!" className="p-2 m-2">
+                                                        <a href="https://twitter.com/" className="p-2 m-2">
                                                             <MDBIcon fab icon="twitter" className="white-text" />
                                                         </a>
                                                         <a href="#!" className="p-2 m-2">
@@ -179,7 +103,7 @@ class Main extends Component {
                     </MDBContainer>
                     <Testimony />
                     <Switch>
-                        <Route path="/interviews" render={props => <Interviews  className = {this.state.showInterview} />} />
+                        <Route path="/interviews" render={props => <Interviews className={this.state.showInterview} />} />
                     </Switch>
                 </Router>
             </div>

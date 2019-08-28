@@ -6,8 +6,10 @@ import '../Forms/Forms.css';
 const FormIn = () => {
 
     return (
+        
         <div align="center" className="form-control"> 
-        <h2>Sign In</h2>
+        <br/><br/><br/>
+        <h2>Eazi4u - Sign In</h2>
         <br/> 
          <form>
              <div>
