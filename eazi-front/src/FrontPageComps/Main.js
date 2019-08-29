@@ -57,6 +57,7 @@ class Main extends Component {
                                                 <h3 className="text-center">
                                                     <MDBIcon icon="user" /> Register:
                                                 </h3>
+                                                <div align="center"><MDBBtn color='indigo'><MDBIcon fab icon="google" />  Sign In with Google</MDBBtn></div>
                                                 <hr className="hr-light" />
                                                 <MDBInput label="Your name" icon="user" className="white-text" />
                                                 <MDBInput label="Your email" icon="envelope" className="white-text" />
