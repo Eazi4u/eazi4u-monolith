@@ -1,0 +1,15 @@
+{
+  "name": "eazi-node",
+  "version": "1.0.0",
+  "description": "JavaScript backend for eazi4u recruitment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/App.js"
+  },
+  "author": "Phelo Macanda",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
