@@ -16,34 +16,34 @@ class InterviewScheduler extends Component {
       modal: false,
 
       events: [
-        {
-          id: 1,
-          time: "10:00",
-          title: "Interview with candidate A",
-          location: "Boardroom",
-          description: "Senior Java role"
-        },
+        // {
+        //   id: 1,
+        //   time: "10:00",
+        //   title: "Interview with candidate A",
+        //   location: "Boardroom",
+        //   description: "Senior Java role"
+        // },
 
-        {
-          id: 2,
-          time: "10:30",
-          title: "Interview with candidate B",
-          location: "Boardroom"
-        },
+        // {
+        //   id: 2,
+        //   time: "10:30",
+        //   title: "Interview with candidate B",
+        //   location: "Boardroom"
+        // },
 
-        {
-          id: 3,
-          time: "11:00",
-          title: "Interview with candidate C"
-        },
-        {
-          id: 4,
-          time: "11:30",
-          title: "Interview with candidate D",
-          location: "Boardroom",
-          description:
-            "Junior NodeJS/React Developer role"
-        }
+        // {
+        //   id: 3,
+        //   time: "11:00",
+        //   title: "Interview with candidate C"
+        // },
+        // {
+        //   id: 4,
+        //   time: "11:30",
+        //   title: "Interview with candidate D",
+        //   location: "Boardroom",
+        //   description:
+        //     "Junior NodeJS/React Developer role"
+        // }
       ]
     }
   }
@@ -121,7 +121,7 @@ class InterviewScheduler extends Component {
             <MDBCol md="3">
               <h3 className="text-uppercase my-3">Schedule</h3>
               <h6 className="my-3">
-                It's going to be busy that today. You have{" "}
+                It's going to be a busy day today. You have{" "}
                 <b>{this.state.events.length} events </b> today.
                   </h6>
               <h1 className="my-3">
