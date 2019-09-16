@@ -2,6 +2,7 @@
 
 import React, { Component } from 'react';
 import SignIn from '../Forms/SignIn';
+import HowTo from '../FrontPageComps/HowTo';
 import Testimony from './Testimonials';
 import Interviews from '../InterviewScheduler/Interviews';
 import SignUp from '../Forms/SignUp';
@@ -102,6 +103,7 @@ class Main extends Component {
                             </MDBCol>
                         </MDBRow>
                     </MDBContainer>
+                    <HowTo name="Eazi4u"/>
                     <Testimony />
                     <Switch>
                         <Route path="/interviews" render={props => <Interviews className={this.state.showInterview} />} />
