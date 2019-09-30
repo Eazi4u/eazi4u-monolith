@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-// import './fonts/index.css';
+import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { LinkContainer } from 'react-router-bootstrap';
 import {
@@ -54,14 +54,16 @@ class App extends Component {
                 navbar
               >
                 <MDBNavbarNav left>
-                  <MDBNavItem active>
-                    <MDBNavLink to="/" onClick={this.changeAnotherState}>Home</MDBNavLink>
-                  </MDBNavItem>
+                 <LinkContainer to={'/'}>
                   <MDBNavItem>
-                    <LinkContainer to={'/signIn'} className="mx-3">
-                      <MDBNavLink onClick={this.changeState}>Sign In</MDBNavLink>
-                    </LinkContainer>
+                    <MDBNavLink to="/">Home</MDBNavLink>
                   </MDBNavItem>
+                </LinkContainer>
+                <LinkContainer to={'/signIn'} className="mx-3">
+                  <MDBNavItem>
+                      <MDBNavLink to='/signIn'>Sign In</MDBNavLink>
+                  </MDBNavItem>
+                  </LinkContainer>
                   <MDBNavItem>
                     <LinkContainer to={'/interviews'}>
                       <MDBNavLink className="mx-3" onClick={this.changeState}> Interviews </MDBNavLink>
@@ -86,9 +88,12 @@ class App extends Component {
               </MDBCollapse>
             </MDBContainer>
           </MDBNavbar>
-          {this.state.collapseID && overlay}
+          {/* {this.state.collapseID && overlay} */}
         </div>
-        {this.state.showMain ? <Main /> : <Interviews />} 
+         <Switch>
+           <Route exact path='/' component={Main} />
+           <Route path='/signIn' component={SignIn} />
+         </Switch>
         </Router>
       </div>
     );

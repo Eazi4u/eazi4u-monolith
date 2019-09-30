@@ -1,5 +1,6 @@
 import React from 'react';
 import * as ReactBootStrap from 'react-bootstrap';
+import { MDBCard, MDBCol } from 'mdbreact';
 import '../Forms/Forms.css';
 
 
@@ -9,11 +10,14 @@ const FormIn = () => {
         
         <div align="center" className="form-control"> 
         <br/><br/><br/>
+        <MDBCol>
+        <MDBCard style={{width:'30rem'}}>
+        <br/>
         <h2>Eazi4u - Sign In</h2>
-        <br/> 
+        <hr/> 
          <form>
              <div>
-                 <label>E-mail</label><br/>
+                 <label><strong>E-mail</strong></label><br/>
                  <input 
                      type="email" 
                      name="email" 
@@ -21,7 +25,7 @@ const FormIn = () => {
                      />
              </div>
              <div>
-                 <label>Password</label> <br/>
+                 <label><strong>Password</strong></label> <br/>
                  <input
                  type="password"
                  name="password"
@@ -30,7 +34,9 @@ const FormIn = () => {
              </div>
          </form>
          <br/>
-         <ReactBootStrap.Button> Sign In </ReactBootStrap.Button>
+         <ReactBootStrap.Button width='10'> Sign In </ReactBootStrap.Button>
+         </MDBCard>
+         </MDBCol>
          </div>
      );
 
