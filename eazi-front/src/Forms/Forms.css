@@ -1,3 +1,19 @@
+.container-fluid {
+  margin-top: 110px;
+}
+
+.col-md-6 {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1358px) {
+  .col-lg-6 {
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
+}
+
 .form-control {
     margin: 1rem 0;
   }
@@ -5,19 +21,17 @@
   .form-control label,
   .form-control input,
   .form-control textarea {
-    display: block;
-    width: auto;
+    /*display: block;*/
+    width: 300px;
     margin-bottom: 0.25rem;
   }
   
   .form-control input,
   .form-control textarea {
-    border: 1px solid #a1a1a1;
     font: inherit;
-    border-radius: 5px;
   }
   
-  .form-control input:focus,
+  /* .form-control input:focus,
   .form-control textarea:focus {
     outline-color: green;
   }
@@ -25,4 +39,4 @@
   .form-control input.invalid,
   .form-control textarea.invalid {
     border-color: red;
-  } 
+  }  */

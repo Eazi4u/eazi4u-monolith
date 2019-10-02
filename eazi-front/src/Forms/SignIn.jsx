@@ -1,44 +1,45 @@
 import React from 'react';
 import * as ReactBootStrap from 'react-bootstrap';
-import { MDBCard, MDBCol } from 'mdbreact';
+import { MDBCard, MDBCol, MDBContainer, MDBRow } from 'mdbreact';
 import '../Forms/Forms.css';
 
 
 const FormIn = () => {
 
     return (
-        
-        <div align="center" className="form-control"> 
-        <br/><br/><br/>
-        <MDBCol>
-        <MDBCard style={{width:'30rem'}}>
-        <br/>
-        <h2>Eazi4u - Sign In</h2>
-        <hr/> 
-         <form>
-             <div>
-                 <label><strong>E-mail</strong></label><br/>
-                 <input 
-                     type="email" 
-                     name="email" 
-                     id="email" 
-                     />
-             </div>
-             <div>
-                 <label><strong>Password</strong></label> <br/>
-                 <input
-                 type="password"
-                 name="password"
-                 id="password"
-                 />
-             </div>
-         </form>
-         <br/>
-         <ReactBootStrap.Button width='10'> Sign In </ReactBootStrap.Button>
-         </MDBCard>
-         </MDBCol>
-         </div>
-     );
+        <div className='container-fluid' align='center'>
+        {/* <MDBContainer> */}
+            <MDBRow>
+            <MDBCol size='3'>
+                <div className="form-control">
+                    <MDBCard style={{ width: '30rem', height:'20rem', align: 'center',  backgroundColor: '#c38989'}}>
+                        <h2><strong>Eazi4u - Sign In</strong></h2>
+                        <hr />
+                            <div>
+                                <label><strong>E-mail</strong></label>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                />
+                            </div>
+                            <div>
+                                <label><strong>Password</strong></label> 
+                                <input
+                                    type="password"
+                                    name="password"
+                                    id="password"
+                                />
+                            </div>
+                        <ReactBootStrap.Button style={{width: '150px', height: '40px', padding:'10'}}> Sign In </ReactBootStrap.Button>
+                        <ReactBootStrap.Button variant="success" style={{width: '240px', height: '40px', padding: '10'}}> Continue With Google </ReactBootStrap.Button>
+                    </MDBCard>
+                </div>
+            </MDBCol>
+            </MDBRow>
+        {/* </MDBContainer> */}
+        </div>
+    );
 
 }
 
