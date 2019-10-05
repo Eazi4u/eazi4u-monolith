@@ -88,11 +88,11 @@ class App extends Component {
               </MDBCollapse>
             </MDBContainer>
           </MDBNavbar>
-          {/* {this.state.collapseID && overlay} */}
         </div>
          <Switch>
            <Route exact path='/' component={Main} />
            <Route path='/signIn' component={SignIn} />
+           <Route path='/interviews' component={Interviews} />
          </Switch>
         </Router>
       </div>

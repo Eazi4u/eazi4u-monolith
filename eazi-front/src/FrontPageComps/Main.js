@@ -36,7 +36,7 @@ class Main extends Component {
                         <MDBMask className="d-flex justify-content-center align-items-center gradient">
                             <MDBContainer>
                                 <MDBRow>
-                                    <div className="white-text text-center text-md-left col-md-6 mt-xl-5 mb-5">
+                                    <div className="white-text text-left text-md-left col-md-8 mt-xl-5 mb-5">
                                         <h1 className="h1-responsive font-weight-bold">
                                             Sign Up Now!{" "}
                                         </h1>
@@ -52,7 +52,7 @@ class Main extends Component {
                                             Learn More
                                         </MDBBtn>
                                     </div>
-                                    <MDBCol md="6" xl="5" className="mb-4">
+                                    <MDBCol md="8" xl="5" className="mb-4">
                                         <MDBCard id="classic-card">
                                             <MDBCardBody className="z-depth-2 white-text" align="left">
                                                 <h3 className="text-center">
