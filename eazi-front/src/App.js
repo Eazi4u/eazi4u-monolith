@@ -10,6 +10,7 @@ import {
 import Main from './FrontPageComps/Main';
 import SignIn from '../src/Forms/SignIn';
 import Interviews from '../src/InterviewScheduler/Interviews';
+import AboutUs from './AboutUs/AboutUs';
 
 class App extends Component {
 
@@ -59,10 +60,15 @@ class App extends Component {
                     <MDBNavLink to="/">Home</MDBNavLink>
                   </MDBNavItem>
                 </LinkContainer>
-                <LinkContainer to={'/signIn'} className="mx-3">
+                <LinkContainer to={'/signIn'}>
                   <MDBNavItem>
                       <MDBNavLink to='/signIn'>Sign In</MDBNavLink>
                   </MDBNavItem>
+                  </LinkContainer>
+                  <LinkContainer to={'/aboutUs'}>
+                    <MDBNavItem>
+                      <MDBNavLink to='/aboutUs'>About Us</MDBNavLink>
+                    </MDBNavItem>
                   </LinkContainer>
                   <MDBNavItem>
                     <LinkContainer to={'/interviews'}>
@@ -92,6 +98,7 @@ class App extends Component {
          <Switch>
            <Route exact path='/' component={Main} />
            <Route path='/signIn' component={SignIn} />
+           <Route path='/aboutUs' component={AboutUs} />
            <Route path='/interviews' component={Interviews} />
          </Switch>
         </Router>

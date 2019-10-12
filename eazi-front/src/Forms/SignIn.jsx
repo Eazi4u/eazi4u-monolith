@@ -12,7 +12,7 @@ const FormIn = () => {
             <MDBRow>
             <MDBCol size='3'>
                 <div className="form-control">
-                    <MDBCard style={{ width: '30rem', height:'20rem', align: 'center',  backgroundColor: '#c38989'}}>
+                    <MDBCard style={{ width: '30rem', height:'20rem'}}>
                         <h2><strong>Eazi4u - Sign In</strong></h2>
                         <hr />
                             <div>

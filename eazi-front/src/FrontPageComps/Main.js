@@ -11,7 +11,7 @@ import { Navbar, Nav, NavDropdown, Form, FormControl, Button, Media, Badge } fro
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import {
     MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBMask, MDBRow, MDBCol, MDBIcon,
-    MDBBtn, MDBView, MDBContainer, MDBCard, MDBCardBody, MDBInput, MDBFormInline
+    MDBBtn, MDBView, MDBContainer, MDBCard, MDBCardBody, MDBInput, MDBFormInline, MDBFooter
 } from "mdbreact";
 import '../App.css';
 
@@ -52,7 +52,7 @@ class Main extends Component {
                                             Learn More
                                         </MDBBtn>
                                     </div>
-                                    <MDBCol md="8" xl="5" className="mb-4">
+                                    <MDBCol md="8" xl="4" className="mb-4">
                                         <MDBCard id="classic-card">
                                             <MDBCardBody className="z-depth-2 white-text" align="left">
                                                 <h3 className="text-center">
@@ -103,11 +103,40 @@ class Main extends Component {
                             </MDBCol>
                         </MDBRow>
                     </MDBContainer>
-                    <HowTo name="Eazi4u"/>
+                    <HowTo name="Eazi4u" />
                     <Testimony />
-                    <Switch>
-                        <Route path="/interviews" render={props => <Interviews className={this.state.showInterview} />} />
-                    </Switch>
+                    <MDBFooter color="black" className="font-small pt-4 mt-4 md-5">
+                        <MDBContainer fluid className="text-center text-md-left">
+                            <MDBRow md="6">
+                                <MDBCol md="6">
+                                    <h5 className="title">Eazi4u Recruitment</h5>
+                                    {/* <p>
+                                        Here you can use rows and columns here to organize your footer
+                                        content.
+                                    </p> */}
+                                </MDBCol>
+                                <MDBCol md="6">
+                                    <h5 className="title">Quick Links</h5>
+                                    <ul>
+                                        <li className="list-unstyled">
+                                            <a href="#!">Help</a>
+                                        </li>
+                                        <li className="list-unstyled">
+                                            <a href="#!">Careers</a>
+                                        </li>
+                                        <li className="list-unstyled">
+                                            <a href="#!">Blogs</a>
+                                        </li>
+                                    </ul>
+                                </MDBCol>
+                            </MDBRow>
+                        </MDBContainer>
+                        <div className="footer-copyright text-center py-1">
+                            <MDBContainer fluid>
+                                &copy; {new Date().getFullYear()} Copyright: <a href="https://www.Eazi4u.com"> Eazi4u.com </a>
+                            </MDBContainer>
+                        </div>
+                    </MDBFooter>
                 </Router>
             </div>
         );
