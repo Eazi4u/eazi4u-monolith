@@ -11,6 +11,7 @@ import Main from './FrontPageComps/Main';
 import SignIn from '../src/Forms/SignIn';
 import Interviews from '../src/InterviewScheduler/Interviews';
 import AboutUs from './AboutUs/AboutUs';
+import Help from './Help/Help';
 
 class App extends Component {
 
@@ -99,6 +100,7 @@ class App extends Component {
            <Route exact path='/' component={Main} />
            <Route path='/signIn' component={SignIn} />
            <Route path='/aboutUs' component={AboutUs} />
+           <Route path='/help' component={Help} />
            <Route path='/interviews' component={Interviews} />
          </Switch>
         </Router>

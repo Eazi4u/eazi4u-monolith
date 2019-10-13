@@ -119,7 +119,7 @@ class Main extends Component {
                                     <h5 className="title">Quick Links</h5>
                                     <ul>
                                         <li className="list-unstyled">
-                                            <a href="#!">Help</a>
+                                            <a href="/help">Help</a>
                                         </li>
                                         <li className="list-unstyled">
                                             <a href="#!">Careers</a>
