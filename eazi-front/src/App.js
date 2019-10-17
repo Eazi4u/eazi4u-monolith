@@ -71,11 +71,12 @@ class App extends Component {
                       <MDBNavLink to='/aboutUs'>About Us</MDBNavLink>
                     </MDBNavItem>
                   </LinkContainer>
-                  <MDBNavItem>
                     <LinkContainer to={'/interviews'}>
-                      <MDBNavLink className="mx-3" onClick={this.changeState}> Interviews </MDBNavLink>
+                      <MDBNavItem>
+                        <MDBNavLink className="mx-3" onClick={this.changeState} to='/interviews'> Interviews </MDBNavLink>
+                      </MDBNavItem>
                     </LinkContainer>
-                  </MDBNavItem>
+                  
                 </MDBNavbarNav>
                 <MDBNavbarNav right>
                   <MDBNavItem>

@@ -1,7 +1,7 @@
 import React from 'react';
 import * as ReactBootStrap from 'react-bootstrap';
 import { MDBCard, MDBCol, MDBContainer, MDBRow } from 'mdbreact';
-import '../Forms/Forms.css';
+import './Forms.css';
 
 
 const FormIn = () => {
@@ -11,7 +11,7 @@ const FormIn = () => {
         {/* <MDBContainer> */}
             <MDBRow>
             <MDBCol size='3'>
-                <div className="form-control">
+                <div className="form-control" style={{width: '418%', borderColor: 'white'}}>
                     <MDBCard style={{ width: '30rem', height:'20rem'}}>
                         <h2><strong>Eazi4u - Sign In</strong></h2>
                         <hr />

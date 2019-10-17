@@ -1,11 +1,13 @@
 .container-fluid {
   margin-top: 110px;
   width: 427%;
+  border: none;
 }
 
 .col-md-6 {
   display: flex;
   justify-content: center;
+  border: none;
 }
 
 @media (max-width: 1358px) {
@@ -16,29 +18,23 @@
 }
 
 .form-control {
-    margin: 1rem 0;
-    width: 1760px;
-  }
-  
-  .form-control label,
-  .form-control input,
-  .form-control textarea {
-    /*display: block;*/
-    width: 300px;
-    margin-bottom: 0.25rem;
-  }
-  
-  .form-control input,
-  .form-control textarea {
-    font: inherit;
-  }
-  
-  /* .form-control input:focus,
-  .form-control textarea:focus {
-    outline-color: green;
-  }
-  
-  .form-control input.invalid,
-  .form-control textarea.invalid {
-    border-color: red;
-  }  */
+  margin: 1rem 0;
+}
+
+.form-control label,
+.form-control input,
+.form-control textarea {
+  display: block;
+  width: 20rem;
+  /*height: 7rem;*/
+  margin-bottom: 0.25rem;
+}
+
+.form-control input,
+.form-control textarea {
+  border: 1px solid #a1a1a1;
+  font: inherit;
+  border-radius: 6px;
+}
+
+
