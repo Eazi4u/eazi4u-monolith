@@ -31,7 +31,7 @@ const Help = (props) => {
                 <input placeholder='Reason'/>
                 <textarea placeholder='Message'/>
                 <form onSubmit={handleAlert}>
-                    <ReactBootStrap.Button type="submit">Send</ReactBootStrap.Button>
+                    <ReactBootStrap.Button type="submit" color='grey'>Send</ReactBootStrap.Button>
                 </form>
                 
             </div>
