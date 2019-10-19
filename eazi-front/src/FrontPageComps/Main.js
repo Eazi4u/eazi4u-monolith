@@ -20,8 +20,19 @@ class Main extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            showInterview: false
+            showInterview: false,
+            apiResponse: ""
         }
+    }
+
+    callAPI(){
+        fetch("http://localhost:3100/login")
+            .then(res => res.text())
+            .then(res => this.setState({ apiResponse: res }));
+    }
+
+    componentWillMount() {
+        this.callAPI();
     }
 
     state = {
@@ -137,6 +148,7 @@ class Main extends Component {
                             </MDBContainer>
                         </div>
                     </MDBFooter>
+                    <p>{this.state.apiResponse}</p>
                 </Router>
             </div>
         );
