@@ -6,7 +6,7 @@ const HowTo = (props) => {
 
 
     return (
-        <p className="text">
+        <div className="text">
             <h1>
                 <strong>This is the process you go through in {props.name}</strong>
             </h1>
@@ -20,7 +20,7 @@ const HowTo = (props) => {
                 </MDBRow>
             </MDBCol>
 
-        </p>
+        </div>
     );
 
 }

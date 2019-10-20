@@ -1,6 +1,7 @@
 // This is our main front page for eazi4u :) 
 
 import React, { Component } from 'react';
+import axios from 'axios';
 import SignIn from '../Forms/SignIn';
 import HowTo from '../FrontPageComps/HowTo';
 import Testimony from './Testimonials';
@@ -21,19 +22,27 @@ class Main extends Component {
         super(props);
         this.state = {
             showInterview: false,
-            apiResponse: ""
+            apiResponse: []
         }
     }
 
-    callAPI(){
-        fetch("http://localhost:3100/login")
-            .then(res => res.text())
-            .then(res => this.setState({ apiResponse: res }));
+    componentDidMount(){
+        axios.get('http://localhost:3100/login')
+            .then(res => {
+                console.log(res);
+                this.setState({apiResponse: res.data})
+            })
+            
     }
+    // callAPI(){
+    //     fetch("http://localhost:3100/login")
+    //         .then(res => res.text())
+    //         .then(res => this.setState({ apiResponse: res }));
+    // }
 
-    componentWillMount() {
-        this.callAPI();
-    }
+    // componentWillMount() {
+    //     this.callAPI();
+    // }
 
     state = {
         collapseID: ""
