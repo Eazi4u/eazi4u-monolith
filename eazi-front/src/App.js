@@ -10,6 +10,7 @@ import {
 import Main from './FrontPageComps/Main';
 import SignIn from '../src/Forms/SignIn';
 import Interviews from '../src/InterviewScheduler/Interviews';
+import Candidate from '../src/CandidatePort/Candidate';
 import AboutUs from './AboutUs/AboutUs';
 import Help from './Help/Help';
 
@@ -76,6 +77,11 @@ class App extends Component {
                         <MDBNavLink className="mx-3" onClick={this.changeState} to='/interviews'> Interviews </MDBNavLink>
                       </MDBNavItem>
                     </LinkContainer>
+                    <LinkContainer to={'/candidate'}>
+                      <MDBNavItem>
+                        <MDBNavLink className="mx-3" to='/candidate'> CandidatePort </MDBNavLink>
+                      </MDBNavItem>
+                    </LinkContainer>
                   
                 </MDBNavbarNav>
                 <MDBNavbarNav right>
@@ -103,6 +109,7 @@ class App extends Component {
            <Route path='/aboutUs' component={AboutUs} />
            <Route path='/help' component={Help} />
            <Route path='/interviews' component={Interviews} />
+           <Route path='/candidate' render={props => <Candidate fName="Phelo Macanda" category="Information Technology" expectedSalary="R10000" {...props} />}/>
          </Switch>
         </Router>
       </div>

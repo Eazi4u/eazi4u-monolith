@@ -5,8 +5,6 @@ import axios from 'axios';
 import SignIn from '../Forms/SignIn';
 import HowTo from '../FrontPageComps/HowTo';
 import Testimony from './Testimonials';
-import Interviews from '../InterviewScheduler/Interviews';
-import SignUp from '../Forms/SignUp';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button, Media, Badge } from 'react-bootstrap';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
